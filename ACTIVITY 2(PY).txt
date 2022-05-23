@@ -1,0 +1,146 @@
+#1
+number=int(input('the number: '))
+if number>0:
+    print('positive')
+elif number<0:
+    print('negative')
+else:
+    print('zero')
+#2(odd,even)
+num = int(input('enter the number:'))
+if num % 2 ==0:
+    print(num,'it is even')
+else:
+    print(num,'it is odd')
+#3leap year
+year=int(input('Year: '))
+if year%4==0:
+    print(f'{year} is a leap year')
+else:
+    print(f'{year} is a non leap year')
+#4 to find largest of numbers
+n1=float(input('enter first number: '))
+n2=float(input('enter second number: '))
+n3=float(input('enter third number: '))
+if n1>n2 and n1>n3:
+    print(f'the largest number is {n1}')
+elif n2>n3 and n2>n1:
+    print(f'the largest number is {n2}')
+else:
+    print(f'the largest number is {n3}')
+#5(prime number)
+num =int(input('enter the number: '))
+if num>1:
+    for i in range(2,num):
+        if(num%i)==0:
+            print(num,'it is  not a prime number')
+            break
+        else:
+            print(num,' it is a prime number')
+else:
+    print(num,'it is not a prime number')
+#6(print all prime numbers)
+lower = 2
+upper = 50
+print("Prime numbers between", lower, "and", upper, "are:")
+for num in range(lower, upper + 1):
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+#7factorial
+num = int(input("Enter a number: "))
+f= 1
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       f = f*i
+   print("The factorial of",num,"is",f)
+#8multiplication table
+num=int(input('multiplication table of: '))
+for i in range(1,11):
+    print(num,'*',i,'=',num*i)
+#9 fibanocci series
+nterms = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+#10 armstrong number
+#sum of individual cube=tat number(153,371)
+# %:remainder //:quotient
+s=0
+n=int(input('enter the number: '))
+b=n
+while(n>0):
+        a=n%10
+        n=n//10
+        s=s+a*a*a
+if b==s:
+       print('Armstrong number')
+else:
+       print('not armstrong number')
+#armstrong number in range
+lower = 100
+upper = 500
+for num in range(lower, upper + 1):
+    # order of number
+    order = len(str(num))
+    # initialize sum
+    sum = 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+    if num == sum:
+        print(num)
+#12 sum of natural numbers(decreasing the number and adding upto o):13+12+11+10+9+8....
+num=int(input('what is the number? '))
+if num < 0:
+   print("Enter a positive number")
+else:
+   sum = 0
+   while(num > 0):
+       sum += num
+       num -= 1
+   print("The sum is", sum)
+#13 pyrmaid patterns
+rows = int(input("Enter number of rows: "))
+for i in range(rows):
+    for j in range(i+1):
+        print("* ", end="")
+    print("\n")
+#14 iterate dictionaries
+d = {'k1': 'apple', 'k2': 'lemon', 'k3': 'corn'}
+for key, value in d.items():
+    print(key, value)
+#15 reverse a number
+rev=0
+n=int(input('enter the number to be reversed: '))
+while(n>0):
+    a=n%10
+    n=n//10
+    rev=rev*10+a
+print(rev)
+#16 exponent of number
+base = int(input('base:'))
+exponent =int(input('exponent:'))
+result = pow(base, exponent)
+print(f'the exponent is {result} ')
