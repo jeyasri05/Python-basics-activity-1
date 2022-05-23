@@ -1,0 +1,174 @@
+#1.display powers of 2:
+result = list(map(lambda x: 2 ** x, range(0,10)))
+for i in range(0,10):
+    print("2 raised to power", i, "is", result[i])
+#2.number divisible by another num:
+my_list = [12, 65, 54, 39, 102, 339, 221]
+result = list(filter(lambda x: (x % 3 == 0), my_list))
+print("Numbers divisible by 3 are",result)
+#3.# Python program to convert decimal into other number systems
+dec = 30
+print("The decimal value of", dec, "is:")
+print(bin(dec), "in binary.")
+print(oct(dec), "in octal.")
+print(hex(dec), "in hexadecimal.")
+#4.# Program to find the ASCII value of the given character
+c = 'a'
+print("The ASCII value of '" + c + "' is", ord(c))
+#5.hcf
+def find_hcf(x, y):
+    if x > y:
+        small=y
+    else:
+        small= x
+    for i in range(1, small+1):
+        if((x % i == 0) and (y % i == 0)):
+            hcf = i
+    return hcf
+x= 30
+y = 15
+print("The H.C.F. is", find_hcf(x,y))
+#6.lcm
+def compute_lcm(x, y):
+   if x > y:
+       greater = x
+   else:
+       greater = y
+
+   while(True):
+       if((greater % x == 0) and (greater % y == 0)):
+           lcm = greater
+           break
+       greater += 1
+   return lcm
+a= 10
+b = 15
+print("The L.C.M. of is", compute_lcm(a,b))
+#7.factors of number
+def print_factors(x):
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
+num = 54
+print_factors(num)
+#8.calculator
+def sum(a,b):
+    return a+b
+def mul(m,n):
+    return m*n
+def sub(x,y):
+    return x-y
+def div(i,j):
+    return i/j
+print("Select operation.")
+print("1.Sum")
+print("2.Sub")
+print("3.Mult")
+print("4.Div")
+
+while True:
+    choice = input("Enter choice(1/2/3/4): ")
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", sum(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", sub(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", mult(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", div(num1, num2))
+
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+            break
+
+    else:
+        print("Invalid Input")
+
+#9.shuffle deck of cards
+# importing modules
+import itertools, random
+# make a deck
+deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Clever']))
+# shuffle the cards
+random.shuffle(deck)
+# draw five cards
+print("You got:")
+for i in range(5):
+   print(deck[i][0], "of", deck[i][1])
+
+#10.display calendar
+import calendar;
+c=calendar.calendar(2022)
+print(c)
+#11 fibanocci sequence using recursion
+n=int(input('enter n value: '))
+def recur_fibo(n):
+   if n<=1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
+nterms =int(input('enter the no of terms: '))
+if nterms <=0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(nterms):
+       print(recur_fibo(i))
+
+#12.to find sum using recursion
+def recur_sum(n):
+   if n <= 1:
+       return n
+   else:
+       return n + recur_sum(n-1)
+num = 5
+if num < 0:
+   print("Enter a positive number")
+else:
+   print("The sum is",recur_sum(num))
+#13.factorial using recursion
+n=int(input('enter n value: '))
+def recur_factorial(n):
+    if n == 1:
+        return n
+    else:
+        return n * recur_factorial(n - 1)
+num = 4
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   print("The factorial of", num, "is", recur_factorial(num))
+#14. decimal to binary
+def convertToBinary(n):
+   if n > 1:
+       convertToBinary(n//2)
+   print(n % 2,end = '')
+dec = 15
+convertToBinary(dec)
+print()
+#15.return multiple values from function
+def name():
+    return "Jeyasri","Sakthivel"
+print(name())
+n1,n2 = name()
+print(n1,n2)
+
+
+
+
+
+
+
+
+
