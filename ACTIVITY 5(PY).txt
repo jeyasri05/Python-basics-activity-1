@@ -1,0 +1,92 @@
+#1.interchange 1st and last element
+def interchange(list):
+    list[0],list[-1]=list[-1],list[0]
+    return  list
+list=[5,10,15,20]
+print(interchange(list))
+#2.swap two elements
+def swap(lists,p1,p2):
+    lists[p1],lists[p2]=lists[p2],lists[p1]
+    return lists
+lists=[5,4,6]
+p1=0
+p2=2
+print(swap(lists,p1,p2))
+#3.length of list
+p=[55,8,7,9,2,65,0,12,4]
+print(len(p))
+#4.check element
+w=[8,4,5,12,10,100]
+if 108 in w:
+    print('True')
+else:
+    print('False')
+#5.clear lists
+e=[7,8,9.5,'anu']
+e.clear()
+print(e)
+#6.reverse elements
+a=['anu',100,15.2,'abi']
+a.reverse()
+print(a)
+#7.sum of elements in list
+b=[55,5,2,4]
+total=sum(b)
+print(total)
+#8.multiply
+def mul(my_list):
+    i=1
+    for x in my_list:
+        i=i*x
+    return i
+my_list=[5,8,4,2]
+print(mul(my_list))
+#9,10.smallest num,largest
+s=[2,56,1.5]
+print(min(s))
+print(max(s))
+#11.second largest
+s.sort(reverse=True)
+print(s)
+print(s[1])
+#13,14.even numbers,odd numbers
+list=[85,15,2,56,5]
+for x in list:
+    if x%2==0:
+        print('the even numbers in list:',x)
+    else:
+        print('the odd numbers are:',x)
+#15.all even numbers in range
+for x in range(0,15):
+    if x%2==0:
+        print('the even numbers are: ',x)
+#16.all odd numbers
+for x in range(20,50):
+    if x%2!=0:
+        print('the odd numbers are: ',x)
+#17,18.postive,negative numbers in list
+p=[5,-8,6,-9,0,100,8,-65]
+for x in p:
+    if x>0:
+        print('positive values:',x)
+    elif x<0:
+        print('negative values:',x)
+    else:
+        print('zero')
+#19 positive in range
+for x in range(-4,5):
+    if x>0:
+        print('the positive values:',x)
+#20 negative values in list
+for x in range(-5,8):
+    if x<0:
+        print('negative values:',x)
+
+
+
+
+
+
+
+
+
